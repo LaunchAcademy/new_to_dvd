@@ -1,17 +1,67 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>NewToDvd</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <% flash.each do |name, msg| -%>
-    <%= content_tag :div, msg, class: name %>
-  <% end -%>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%= yield %>
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-</body>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+  <div class="row">
+    <div class="large-12 columns">
+      <% flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, class: name %>
+      <% end -%>
+    </div>
+  </div>
+ 
+ 
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+ 
+ 
+ 
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="row">
+ 
+    <!-- Content -->
+ 
+        <div class="large-12 columns">
+          <div class="panel radius">
+ 
+          <div class="row">
+          <div class="large-6 small-6 columns">
+ 
+            <h4>Rotten Tomatoes New DVD Releases Mailer</h4><hr/>
+            <h5 class="subheader">Get a fresh list of DVD releases straight to your email box every tuesday.</h5>
+ 
+          </div>
+          <div class="large-6 small-6 columns">
+ 
+            <%= yield %>
+          </p>
+        </div>
+ 
+        </div>
+        </div>
+        </div>
+ 
+    <!-- End Content -->
+ 
+      </div>
+    </div>
+  </div>
+
+
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>
