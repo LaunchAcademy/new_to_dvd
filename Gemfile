@@ -9,6 +9,10 @@ gem 'pg'
 gem 'devise'
 gem 'foundation-rails'
 
+gem 'sidekiq'
+gem 'sinatra', require: false
+gem 'slim'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
