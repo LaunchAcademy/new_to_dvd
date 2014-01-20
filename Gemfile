@@ -13,6 +13,14 @@ gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'slim'
 
+gem 'nokogiri'
+
+gem 'simple_form'
+
+group :development, :test do
+  gem 'pry'
+end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

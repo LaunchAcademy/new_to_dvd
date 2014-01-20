@@ -43,20 +43,34 @@
  
             <h4>Rotten Tomatoes New DVD Releases Mailer</h4><hr/>
             <h5 class="subheader">Get a fresh list of DVD releases straight to your email box every tuesday.</h5>
- 
+
           </div>
           <div class="large-6 small-6 columns">
- 
+
             <%= yield %>
           </p>
         </div>
- 
+
         </div>
         </div>
         </div>
- 
+
     <!-- End Content -->
- 
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <div id="user_nav" class="right">
+        <% if user_signed_in? %>
+          Signed in as <%= current_user.email %>.
+          <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+        <% end %>
       </div>
     </div>
   </div>

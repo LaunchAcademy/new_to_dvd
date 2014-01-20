@@ -7,4 +7,8 @@ class User < ActiveRecord::Base
   def admin?
     role == 'admin'
   end
+
+  def self.wanting_email
+    where(mail_status: true)
+  end
 end

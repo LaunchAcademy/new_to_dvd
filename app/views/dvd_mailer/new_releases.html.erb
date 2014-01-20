@@ -1,0 +1,6 @@
+<% @movies.each do |m| %>
+  <%= link_to m[:title], m[:link] %> (<%= m[:rating] %>)<br />
+  <%= m[:synopsis].encode('utf-8', 'iso-8859-1') %><br />
+  <%= m[:staring].map{|s| s.encode('utf-8', 'iso-8859-1')}.join(", ") %><br />
+  <%= m[:info].encode('utf-8', 'iso-8859-1') %><br /><br />
+<% end %>

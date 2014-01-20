@@ -1,2 +1,7 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<h4>Set Mail Status</h4><hr>
+
+<%= simple_form_for current_user, url: user_status_path, method: :put do |f| %>
+  <%= f.input :mail_status, label: 'I want to be emailed weekly on new DVD releases' %>
+  <%= f.submit 'Update Status' %>
+<% end %>
+
