@@ -13,6 +13,8 @@ gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'slim'
 
+gem 'sidetiq'
+
 gem 'nokogiri'
 
 gem 'simple_form'

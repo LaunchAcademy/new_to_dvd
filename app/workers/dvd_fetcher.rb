@@ -3,6 +3,15 @@ require 'open-uri'
 
 class DVDFetcher
   include Sidekiq::Worker
+  include Sidetiq::Schedulable
+
+  recurrence do
+    # fetch and send dvd email every tuesday
+    weekly.day(:tuesday)
+
+    # every 15 seconds for testing
+    # minutely.second_of_minute(0,15,30,45)
+  end
 
   def perform
     movies = {}
